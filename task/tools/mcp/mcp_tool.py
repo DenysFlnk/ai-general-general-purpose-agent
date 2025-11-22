@@ -12,26 +12,30 @@ from task.tools.models import ToolCallParams
 class MCPTool(BaseTool):
 
     def __init__(self, client: MCPClient, mcp_tool_model: MCPToolModel):
-        self._client = client
-        self._mcp_tool_model = mcp_tool_model
+        #TODO:
+        # 1. Set client
+        # 2. Set mcp_tool_model
+        raise NotImplementedError()
 
     async def _execute(self, tool_call_params: ToolCallParams) -> str | Message:
-        arguments = json.loads(tool_call_params.tool_call.function.arguments)
-
-        content = await self._client.call_tool(self.name, arguments)
-
-        tool_call_params.stage.append_content(content)
-
-        return content
+        #TODO:
+        # 1. Load arguments wit `json`
+        # 2. Get content with mcp client tool call
+        # 3. Append retrieved content to stage
+        # 4. return content
+        raise NotImplementedError()
 
     @property
     def name(self) -> str:
-        return self._mcp_tool_model.name
+        # TODO: provide name from mcp_tool_model
+        raise NotImplementedError()
 
     @property
     def description(self) -> str:
-        return self._mcp_tool_model.description
+        # TODO: provide description from mcp_tool_model
+        raise NotImplementedError()
 
     @property
     def parameters(self) -> dict[str, Any]:
-        return self._mcp_tool_model.parameters
+        # TODO: provide parameters from mcp_tool_model
+        raise NotImplementedError()
