@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY task/ ./task/
 
 ENV PYTHONPATH=/app \
-    DIAL_API_KEY=${DIAL_API_KEY} \
+    OPENAI_API_KEY=${OPENAI_API_KEY} \
     DEPLOYMENT_NAME=${DEPLOYMENT_NAME} \
     DIAL_ENDPOINT=${DIAL_ENDPOINT} \
     PYINTERPRETER_MCP_URL=${PYINTERPRETER_MCP_URL} \
