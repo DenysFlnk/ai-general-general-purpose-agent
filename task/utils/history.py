@@ -3,7 +3,7 @@ from typing import Any
 
 from aidial_sdk.chat_completion import Message, Role
 
-from task.utils.constants import TOOL_CALL_HISTORY_KEY, CUSTOM_CONTENT
+from utils.constants import TOOL_CALL_HISTORY_KEY, CUSTOM_CONTENT
 
 
 def unpack_messages(messages: list[Message], state_history: list[dict[str, Any]]) -> list[dict[str, Any]]:
